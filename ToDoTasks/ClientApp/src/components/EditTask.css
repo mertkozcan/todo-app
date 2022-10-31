@@ -1,0 +1,71 @@
+﻿.modal-edit {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+
+.modal-edit.show {
+    opacity: 1;
+    pointer-events: visible;
+}
+
+.modal-edit.enter-done {
+    opacity: 1;
+    pointer-events: visible;
+}
+
+.modal-edit.exit {
+    opacity: 0;
+}
+
+.modal-edit-content {
+    width: 300px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-200px);
+}
+
+.modal-edit.enter-done .modal-edit-content {
+    transform: translateY(0);
+}
+
+.modal-edit.exit .modal-edit-content {
+    transform: translateY(-200px);
+}
+
+.modal-edit-header,
+.modal-edit-footer {
+    padding: 10px;
+}
+
+.modal-edit-title {
+    margin: 0;
+}
+
+.modal-edit-body {
+    padding: 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.edit-task-title {
+    margin-left: 40px;
+}
+
+.edit-task-due-date {
+    margin-left: 5px;
+}
+
+.edit-task-completed-label {
+    margin-left: 5px;
+}
